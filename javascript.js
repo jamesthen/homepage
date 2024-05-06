@@ -1,5 +1,8 @@
-let message = 'hello world!';
-let age = 25;
-let user = 'John';
+let hello = 'Hello world!';
 
-alert (message + age + user);
+let message;
+
+message = hello;
+
+alert (hello);
+alert (message);
