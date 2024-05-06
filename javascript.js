@@ -3,5 +3,4 @@ let message;
 
 message = hello;
 
-alert (hello);
-alert (message);
+alert (hello + message);
