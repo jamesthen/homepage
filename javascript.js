@@ -5,4 +5,7 @@ myFloat;
 console.log(myInt)
 console.log(myFloat)
 
-document.getElementById("demo").innerHTML = (typeof myInt + typeof myFloat);
+let lotsOfDecimal = 1.903248983429843209843098423;
+let twoDecimalPLaces = lotsOfDecimal.toFixed(2);
+
+document.getElementById("demo").innerHTML = (typeof myInt + typeof myFloat + twoDecimalPLaces);
