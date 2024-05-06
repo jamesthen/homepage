@@ -1,6 +1,6 @@
-let hello = 'Hello world!';
-let message;
+let admin;
+let name = 'John';
 
-message = hello;
+admin = name;
 
-alert (hello + message);
+alert (admin);
