@@ -8,4 +8,7 @@ console.log(myFloat)
 let lotsOfDecimal = 1.903248983429843209843098423;
 let twoDecimalPLaces = lotsOfDecimal.toFixed(2);
 
-document.getElementById("demo").innerHTML = (typeof myInt + typeof myFloat + twoDecimalPLaces);
+let myNumber = "74";
+myNumber = Number(myNUmber) + 3;
+
+document.getElementById("demo").innerHTML = (typeof myInt + typeof myFloat + twoDecimalPLaces <br>myNumber);
