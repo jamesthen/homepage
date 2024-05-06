@@ -1,6 +1,2 @@
-let admin;
-let name = 'John';
-
-admin = name;
-
-alert (admin);
+let x = 100 + 50;
+alert (x);
