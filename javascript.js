@@ -22,3 +22,6 @@ num2 / num1; // 5
 5 + 10 * 3; // 45
 (num2 % 9) * num1; // 50
 num2 + num1 / 8 + 2; // 6
+
+
+document.getElementById("maths").innerHTML = (num2 + num1 / 8 + 2);
