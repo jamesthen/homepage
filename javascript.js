@@ -1,2 +1,6 @@
-let x = 100 % 50;
-alert (x);
+let myInt = 5;
+let myFloat = 6.667;
+myInt;
+myFloat;
+
+document.getElementById("demo").innerHTML = (typeof myInt + typeof myFloat);
