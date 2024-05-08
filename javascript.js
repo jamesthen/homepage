@@ -22,3 +22,13 @@ const MAX = 57;
 let actual = MAX - 13;
 let percentage = actual / MAX;
 document.getElementById("percent").innerHTML = (percentage);
+
+
+let button = document.querySelector("button");
+
+button.addEventListener("click", updateName);
+
+function updateName() {
+    let updateName = prompt("Enter a new name");
+    button.textContent = 'Player 1: ${name}';
+}
