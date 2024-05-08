@@ -16,3 +16,9 @@ document.getElementById("demo").innerHTML = (typeof myInt + typeof myFloat + two
 let num1 = 4;
 num1++;
 num1;
+console.log(num1);
+
+const MAX = 57;
+let actual = MAX - 13;
+let percentage = actual / MAX;
+document.getElementById("percent").innerHTML = (percentage);
