@@ -31,5 +31,5 @@ button.addEventListener("click", updateName);
 function updateName() {
     let name = prompt("Enter a new name");
     button.textContent = `Player 1: ${name}`;
-    console.log(textContent);
+    console.log(`hello there ${name}`);
 }
