@@ -33,3 +33,9 @@ function updateName() {
     button.textContent = `Player 1: ${name}`;
     console.log(`hello there ${name}`);
 }
+
+function favoriteAnimal(animal) {
+    return animal + " is my favorite animal";
+}
+
+console.log(favoriteAnimal(Goat));
