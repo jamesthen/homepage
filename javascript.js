@@ -45,8 +45,29 @@ let randomNumber = Math.random();
 randomNumber = randomNumber * 100;
 console.log(randomNumber);
 
+
+myFunction();
+
+
 function myFunction(){
     console.log("My function is running");
 };
 
-myFunction();
+let myString = "I am a string";
+
+let updatedString = myString.replace("string", "G.O.A.T.");
+
+console.log(updatedString);
+
+function square(number) {
+    return number * number;
+}
+
+console.log(square(2));
+
+const textBox = document.querySelector("#textBox");
+const output = document.querySelector("#output");
+
+textBox.addEventListener("keydown", (event) => {
+  output.textContent = `You pressed "${event.key}".`;
+});
