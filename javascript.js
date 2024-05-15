@@ -39,3 +39,14 @@ function favoriteAnimal(animal) {
 }
 
 console.log(favoriteAnimal('goat'));
+
+
+let randomNumber = Math.random();
+randomNumber = randomNumber * 100;
+console.log(randomNumber);
+
+function myFunction(){
+    console.log("My function is running");
+};
+
+myFunction();
