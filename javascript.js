@@ -71,3 +71,21 @@ const output = document.querySelector("#output");
 textBox.addEventListener("keydown", (event) => {
   output.textContent = `You pressed "${event.key}".`;
 });
+
+
+
+const originalString = "apple orange apple banana apple";
+
+// arrow notation
+const newString = originalString.replace(/apple/g, (match, offset) => {
+    return offset + ":fruit";
+});
+
+console.log(newString);
+
+// function notation
+const newString2 = originalString.replace(/apple/g, function(match, offset) {
+    return offset + ":fruit";
+});
+
+console.log(newString2);
