@@ -76,16 +76,24 @@ textBox.addEventListener("keydown", (event) => {
 
 const originalString = "apple orange apple banana apple";
 
-// arrow notation
-const newString = originalString.replace(/apple/g, (match, offset) => {
-    return offset + ":fruit";
-});
 
-console.log(newString);
+let add7 = (n) => n + 7;
+console.log(add7(2));
 
-// function notation
-const newString2 = originalString.replace(/apple/g, function(match, offset) {
-    return offset + ":fruit";
-});
+function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
 
-console.log(newString2);
+console.log(capitalize('capitalized'));
+
+function lastLetter(str) {
+    return str.slice(-1);
+}
+
+console.log(lastLetter('hellot'));
+
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+
+for (const cat of cats) {
+  console.log(cat);
+}
