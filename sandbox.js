@@ -78,3 +78,75 @@ function ask(question, yes, no) {
     () => alert("You agreed."):
     () => alert("You canceled the execution.");
   );
+
+
+  for (let i = 0; i < 100; i++) {
+    ctx.beginPath();
+    ctx.fillStyle = "rgb(255 0 0 / 50%)";
+    ctx.arc(
+      random(canvas.width),
+      random(canvas.height),
+      random(50),
+      0,
+      2 * Math.PI,
+    );
+    ctx.fill();
+  }
+
+
+
+  let output = document.querySelector('.output');
+output.innerHTML = '';
+
+// let i = 10;
+
+// const para = document.createElement('p');
+// para.textContent = ;
+// output.appendChild(para);
+
+  for (let i = 10; i > 0; i--) {
+    if (i = 10 || 0) {
+      if (i = 10) {
+        para.textContent = "countdown 10";
+      } else {
+        para.textContent = "Blast off!";
+      }
+    } else if {
+      para.textContent = i;
+    }
+  }
+
+  while (i >= 0) {
+    const para = document.createElement('p');
+    if (i === 10) {
+      para.textContent = 'countdown ${i}';
+    } else if (i === 0) {
+      para.textContent = "Blast off!";
+    } else {
+      para.textContent = i;
+    }
+    output.appendChild(para);
+    i--
+  }
+
+
+
+
+  const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
+
+  const admitted = document.querySelector('.admitted');
+  const refused = document.querySelector('.refused');
+  
+  admitted.textContent = 'Admit: ';
+  refused.textContent = 'Refuse: ';
+  
+  for (const person of people) {
+    if (person === 'Phil' || person === 'Lola') {
+      refused.textContent += `${person}, `;
+    } else {
+      admitted.textContent += `${person}, `;
+    }
+  }
+  
+  refused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + '.';
+  admitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + '.';
