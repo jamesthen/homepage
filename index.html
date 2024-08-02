@@ -3,12 +3,28 @@
     <head>
         <meta charset="utf-8">
         <title></title>
+        <style type="text/css">
+            .hide {
+              display:none;
+            }
+        </style>
     </head>
 <body>
+        <h1>Running Calculator</h1>
+        <h2>Time</h2>
+        <label for="inputHours">Hours:</label><br>
+        <input type="number" id="hours" value="0"><br>
+        <label for="inputMinutes">Minutes:</label><br>
+        <input type="number" id="minutes" value="0"><br>
+        <label for="inputSeconds">Seconds:</label><br>
+        <input type="number" id="seconds" value="0">
+        <br><br>
+        <label for="inputDistance">Distance (miles):</label>
+        <input type="number" id="distance" value="0">
+        <br>
+        <button id="submitButton">Submit</button>
+        <p id="result"></p>
 
-    <body>
-        <h1>THE TITLE OF YOUR WEBPAGE</h1>
-        <div id="container"></div>
-<script src="javascript.js"></script>
+<script src="javascript-running.js"></script>
 </body>
 </html>
