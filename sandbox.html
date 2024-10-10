@@ -1,162 +1,39 @@
-<style type="text/css">
-    .product-module-container {
-      display: flex;
-      flex-wrap: wrap;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition End Example</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: width 2s, height 2s, transform 2s;
+        }
 
-    .product-module-left {
-      flex: 1;
-      padding: 0px;
-      box-sizing: border-box;
-      justify-content: center;
-      align-items: center;
-      height:auto;
-      background-color: #262831;
-    }
-  
-    .product-module-right {
-      flex: 1;
-      padding: 0px;
-      box-sizing: border-box;
-      height:400;
-    }
-  
-    .product-module-right > img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position:bottom;
-    }
+        .box.active {
+            width: 200px;
+            height: 200px;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <button id="toggle">Toggle Transition</button>
 
+    <script>
+        const box = document.querySelector('.box');
+        const button = document.querySelector('#toggle');
 
-    .product-module-copy > h3 {
-        text-align: center;
-        color: #fff;
-        font-family: Didot, serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 18px;
-        line-height: 22px;
-        letter-spacing: 1px;
-        text-wrap: nowrap;
-        color: #fff;
-        text-transform: uppercase;
-        margin: 10px auto;
-        text-align: center;
-    }
+        button.addEventListener('click', () => {
+            box.classList.toggle('active');
+        });
 
-    .product-module-copy > h2 {
-        text-align: center;
-        color: #fff;
-        font-family: Didot, serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 26px;
-        line-height: 32px;
-        letter-spacing: 1px;
-        color: #fff;
-        text-transform: uppercase;
-        margin: 10px auto;
-        text-align: center;
-    }
-
-    .product-module-copy {
-        margin: auto;
-    }
-    .product-module-copy > div {
-
-    }
-
-
-    .product-module-copy > div > ul {
-        color: #fff;
-    }
-
-    .product-module-copy > div > ul > li {
-        color: #fff;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 12px;
-        -text-wrap: nowrap;
-        color: #fff;
-    }
-
-    .product-module-copy > div > ul > li > a {
-        color: #fff;
-
-    }
-
-    @media (max-width: 799px) {
-      .product-module-container {
-        flex-direction: column;
-      }
-
-      .product-module-left {
-        order: 1;
-      }
-
-      .product-module-right {
-        order: 2;
-        height:300px;
-      }
-
-      .product-module-right > img {
-        object-fit: none;
-    }
-}
-</style>
-
-  <div class="product-module-container">
-    <div class="product-module-left">
-        <div class="product-module-copy">
-        <h3>Our Fits</h3>
-
-        {% if product.tags contains 'Fit: Slim' %}
-        <h2>Slim Denim</h2>
-        <div>
-        <ul>
-            <li>Our bestselling&nbsp;fit</li>
-            <li>Tapered through the&nbsp;leg</li>
-            <li>14.5” leg&nbsp;opening</li>
-        </ul>
-        </div>
-    </div>
-</div>
-<div class="product-module-right">
-        <img src="https://cdn.shopify.com/s/files/1/0186/1574/files/denim-slim_151cb963-dcb4-4c72-892f-40564cfd7e40.jpg?v=1723150208">
-    </div>
-
-        {% elsif product.tags contains 'Fit: Relaxed'%}
-        <h2>Vintage Straight Denim</h2>
-        <div>
-        <ul>
-            <li>Our most versatile&nbsp;fit</li>
-            <li>An higher rise and roomier thigh than&nbsp;<a href="/collections/denim-shop#/filter:tags_fit:Slim">Slim</a></li>
-            <li>16.5” leg&nbsp;opening</li>
-        </ul>
-    </div>
-    </div>
-</div>
-    <div class="product-module-right">
-        <img src="https://cdn.shopify.com/s/files/1/0186/1574/files/denim-relaxed_b63b8e47-c5b9-4a84-8b44-874ca23b2f79.jpg?v=1723150208">
-    </div>
-
-        {% elsif product.tags contains 'Fit: Straight'%}
-        <h2>Straight Denim</h2>
-        <div>
-        <ul>
-            <li>Our most on-trend&nbsp;fit</li>
-            <li>Loose up top; full stovepipe&nbsp;leg</li>
-            <li>18.5” leg&nbsp;opening</li>
-        </ul>
-    </div>
-    </div>
-</div>
-    <div class="product-module-right">
-        <img src="https://cdn.shopify.com/s/files/1/0186/1574/files/denim-straight_e227e31e-0596-44ef-9060-7be591d90831.jpg?v=1723150207">
-    </div>
-    {% else %}
-      Catch-all content
-    {%  endif %}
-  </div>
-    
+        box.addEventListener('transitionend', (event) => {
+            console.log(`Transition ended for property: ${event.propertyName}`);
+        });
+    </script>
+</body>
+</html>

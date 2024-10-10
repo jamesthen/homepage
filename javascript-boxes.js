@@ -8,11 +8,17 @@ addBoxButton.addEventListener("click", ()=> {
     grid.append(box);
 });
 
-document.addEventListener("click", e => {
-    if (e.target.matches(`.box`)) {
-        e.target.classList.toggle("clicked");
-    };
-});
+function addGlobalEventListener(type, selector, callback, parent = document) {
+    parent.addEventListener(type, e => {
+        if (e.target.matches(selector)) {
+            callback(e);
+        };
+    });
+};
+ 
+addGlobalEventListener("click", ".box", e => {
+    e.target.classList.toggle("clicked");
+}, grid);
 
 // boxes.forEach(box => {
 //     box.addEventListener("click", e => {

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //splice
+        let array = ["I", "study", "JavaScript", "right", "now"];
+        array.splice(-1, 1, "omega");
+        console.log(array);
+        //slice
+        let array2 = ["I", "study", "JavaScript", "right", "now"];
+        console.log(array2.slice(0, 3));
+        //concat
+        let array3 = [1,2,3];
+        let array4 = [4,5,6];
+        console.log(array3.concat(array4, [7, 8, 9]));
+        //includes +indexOf
+        let animals = ["tiger", "elephant", "turtle", "fox", "dolphin"];
+        console.log(animals.indexOf("fox"));
+        console.log(animals.includes("fox"));
+    </script>
+</body>
+</html>
