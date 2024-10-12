@@ -23,6 +23,47 @@
         let animals = ["tiger", "elephant", "turtle", "fox", "dolphin"];
         console.log(animals.indexOf("fox"));
         console.log(animals.includes("fox"));
+        //find
+        let users = [
+            {id: 1, name: "John"},
+            {id: 2, name: "Pete"},
+            {id: 3, name: "Sarah"}
+        ];
+        let user = users.find(item => item.id == 3);
+        console.log(user.name);
+        console.log(users.findIndex(item => item.id == 3));
+        //filter
+        console.log(users.filter(item => item.id < 3));
+        //map
+        let lotr = ["Biblo", "Gandalf", "Nazgul"];
+        console.log(lotr.map(item => item.length));
+        //sort
+        let sortNum = [1,2,15,25,4];
+        console.log(sortNum.sort((a, b) => a - b));
+        //reverse
+        console.log(sortNum.reverse());
+        //split
+        let names = 'Biblo, Gandalf, Nazgul';
+        let arrNames = names.split(',', 2);
+        console.log(arrNames);
+        let str = "test";
+        console.log(str.split(''));
+        //join
+        console.log(arrNames.join('&'));
+        //reduce
+        let reduceArr = [1,2,3,4];
+        console.log(reduceArr.reduce((sum, current) => sum + current, 0));
+        //isArray
+        let menu = {
+        width: 200,
+        height: 300,
+        title: "My menu"
+        };
+        console.log(Array.isArray(reduceArr));
+        console.log(Array.isArray(menu));
+        //push, pop, shift, unshift
+        let pushReduceArr = reduceArr.push(5,6,7);
+        console.log(pushReduceArr);
     </script>
-</body>
+</body> 
 </html>
